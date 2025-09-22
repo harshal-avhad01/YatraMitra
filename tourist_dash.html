@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Yatra Mitra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#14B8A6',
+                        'primary-dark': '#0F766E',
+                        secondary: '#334155',
+                        light: '#F8FAFC',
+                        dark: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-gray-100 text-secondary pb-24">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="YatraMitra.html" class="text-2xl font-bold text-secondary">
+                Yatra<span class="text-primary">Mitra</span>
+            </a>
+            <div class="flex items-center space-x-4">
+                <button class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 00-5-5.917V5a2 2 0 10-4 0v.083A6 6 0 004 11v3.159c0 .538-.214 1.055-.595 1.436L2 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+                    <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                    </span>
+                </button>
+                <img src="https://placehold.co/40x40/E2E8F0/334155?text=AV" alt="Avatar" class="w-10 h-10 rounded-full border-2 border-primary">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Welcome, Priya!</h1>
+
+        <!-- Current Trip Card -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="font-bold text-lg mb-2">Your Current Trip: Pune</h2>
+            <p class="text-sm text-gray-500 mb-4">Next up on your itinerary:</p>
+            <div class="flex items-center space-x-4">
+                <div class="bg-primary/10 text-primary p-3 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                </div>
+                <div>
+                    <p class="font-semibold">Visit to Shaniwar Wada</p>
+                    <p class="text-sm text-gray-600">Today at 3:00 PM</p>
+                </div>
+            </div>
+            <div class="mt-4 p-2 bg-green-100 text-green-800 rounded-md text-sm text-center">
+                <p><strong>Status:</strong> You are in a designated safe zone.</p>
+            </div>
+        </div>
+        
+        <!-- Quick Actions -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <a href="#" class="bg-white rounded-lg shadow p-4 flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span class="text-sm font-semibold">My Itinerary</span>
+            </a>
+            <a href="#" class="bg-white rounded-lg shadow p-4 flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <span class="text-sm font-semibold">Explore Nearby</span>
+            </a>
+            <a href="#" class="bg-white rounded-lg shadow p-4 flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                <span class="text-sm font-semibold">Digital ID</span>
+            </a>
+             <a href="#" class="bg-white rounded-lg shadow p-4 flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 4h5m-5 4h5m-5-8h5" /></svg>
+                <span class="text-sm font-semibold">Find Hotels</span>
+            </a>
+        </div>
+    </main>
+    
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-[0_-2px_5px_rgba(0,0,0,0.1)] flex justify-around p-2 z-50">
+        <a href="#" class="flex flex-col items-center text-primary w-full p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
+            <span class="text-xs">Home</span>
+        </a>
+        <a href="itenary.html" class="flex flex-col items-center text-gray-500 w-full p-2 rounded-lg hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 4a1 1 0 012 0v5l4.293 4.293a1 1 0 01-1.414 1.414L9 10.414V4z" clip-rule="evenodd" /></svg>
+            <span class="text-xs">Trip</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-white w-full p-2 rounded-full bg-red-600 shadow-lg -mt-6 transform scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="text-xs font-bold">SOS</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-gray-500 w-full p-2 rounded-lg hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" /></svg>
+            <span class="text-xs">Explore</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-gray-500 w-full p-2 rounded-lg hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
+            <span class="text-xs">Profile</span>
+        </a>
+    </nav>
+</body>
+</html>
