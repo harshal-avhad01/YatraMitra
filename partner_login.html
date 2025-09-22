@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Registration - Yatra Mitra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Configuration consistent with the main site
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#14B8A6', // Teal
+                        secondary: '#334155', // Dark Slate
+                        light: '#F8FAFC',
+                        dark: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-light text-secondary">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <a href="YatraMitra.html" class="text-3xl font-bold text-secondary">
+                Yatra<span class="text-primary">Mitra</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="bg-gray-100 py-12 md:py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-center text-secondary">Become a Yatra Mitra Partner</h2>
+                    <p class="text-center text-gray-500 mt-2">Join our network to build a safer travel ecosystem.</p>
+                    
+                    <form class="mt-8 space-y-8" id="registration-form">
+                        <!-- Section 1: Basic Information -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Basic Information</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="contactName" class="block text-sm font-medium text-gray-700">Contact Person / Owner Name</label>
+                                    <input id="contactName" name="contactName" type="text" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="Your full name">
+                                </div>
+                                 <div>
+                                    <label for="businessName" class="block text-sm font-medium text-gray-700">Business / Establishment Name</label>
+                                    <input id="businessName" name="businessName" type="text" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="e.g., The Grand Hotel">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                    <input id="email" name="email" type="email" autocomplete="email" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="you@example.com">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                    <input id="phone" name="phone" type="tel" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="Your contact number">
+                                </div>
+                                <div>
+                                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                                    <input id="password" name="password" type="password" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="Create a strong password">
+                                </div>
+                                <div>
+                                    <label for="partnerType" class="block text-sm font-medium text-gray-700">I am a...</label>
+                                    <select id="partnerType" name="partnerType" class="mt-1 block w-full py-3 px-4 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
+                                        <option value="">Select a partner type</option>
+                                        <option value="guide">Tourist Guide</option>
+                                        <option value="restaurant">Restaurant</option>
+                                        <option value="hotel">Hotel</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Address & Location -->
+                        <div>
+                             <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Location Details</h3>
+                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="md:col-span-2">
+                                    <label for="address" class="block text-sm font-medium text-gray-700">Full Address</label>
+                                    <textarea id="address" name="address" rows="3" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="Street, Area"></textarea>
+                                </div>
+                                <div>
+                                    <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                                    <input id="city" name="city" type="text" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="e.g., Pune">
+                                </div>
+                                <div>
+                                    <label for="pincode" class="block text-sm font-medium text-gray-700">Pincode</label>
+                                    <input id="pincode" name="pincode" type="text" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="e.g., 411001">
+                                </div>
+                             </div>
+                        </div>
+                        
+                        <!-- Section 3: Verification Documents -->
+                        <div>
+                             <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Verification Documents</h3>
+                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="aadhaar" class="block text-sm font-medium text-gray-700">Aadhaar Card Number</label>
+                                    <input id="aadhaar" name="aadhaar" type="text" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="XXXX XXXX XXXX">
+                                </div>
+                                <div>
+                                    <label for="aadhaarUpload" class="block text-sm font-medium text-gray-700">Upload Aadhaar Card</label>
+                                    <input id="aadhaarUpload" name="aadhaarUpload" type="file" required class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                                </div>
+                                <div>
+                                    <label for="pan" class="block text-sm font-medium text-gray-700">PAN Card Number</label>
+                                    <input id="pan" name="pan" type="text" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="ABCDE1234F">
+                                </div>
+                                <div>
+                                    <label for="panUpload" class="block text-sm font-medium text-gray-700">Upload PAN Card</label>
+                                    <input id="panUpload" name="panUpload" type="file" required class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                                </div>
+                             </div>
+                        </div>
+
+                        <!-- Conditional Fields -->
+                        <div id="conditional-fields" class="space-y-8">
+                            <!-- Guide Specific Fields -->
+                            <div id="guide-fields" class="hidden">
+                                <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Guide Details</h3>
+                                <div class="space-y-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Languages Known</label>
+                                        <div class="mt-2 grid grid-cols-2 md:grid-cols-3 gap-4">
+                                            <label class="flex items-center"><input type="checkbox" name="language" value="english" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"> <span class="ml-2">English</span></label>
+                                            <label class="flex items-center"><input type="checkbox" name="language" value="hindi" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"> <span class="ml-2">Hindi</span></label>
+                                            <label class="flex items-center"><input type="checkbox" name="language" value="marathi" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"> <span class="ml-2">Marathi</span></label>
+                                            <label class="flex items-center"><input type="checkbox" name="language" value="tamil" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"> <span class="ml-2">Tamil</span></label>
+                                            <label class="flex items-center"><input type="checkbox" name="language" value="bengali" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"> <span class="ml-2">Bengali</span></label>
+                                        </div>
+                                    </div>
+                                     <div>
+                                        <label for="guideLicense" class="block text-sm font-medium text-gray-700">Official Guide License Number</label>
+                                        <input id="guideLicense" name="guideLicense" type="text" class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="License No.">
+                                    </div>
+                                     <div>
+                                        <label for="guideLicenseUpload" class="block text-sm font-medium text-gray-700">Upload Guide License</label>
+                                        <input id="guideLicenseUpload" name="guideLicenseUpload" type="file" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Restaurant Specific Fields -->
+                            <div id="restaurant-fields" class="hidden">
+                                <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Restaurant Details</h3>
+                                <div class="space-y-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Restaurant Type</label>
+                                        <div class="mt-2 flex flex-wrap gap-4">
+                                            <label class="flex items-center"><input type="radio" name="restaurantType" value="veg" class="h-4 w-4 text-primary focus:ring-primary border-gray-300"> <span class="ml-2">Pure Veg</span></label>
+                                            <label class="flex items-center"><input type="radio" name="restaurantType" value="nonveg" class="h-4 w-4 text-primary focus:ring-primary border-gray-300"> <span class="ml-2">Non-Veg</span></label>
+                                            <label class="flex items-center"><input type="radio" name="restaurantType" value="restobar" class="h-4 w-4 text-primary focus:ring-primary border-gray-300"> <span class="ml-2">Restobar</span></label>
+                                            <label class="flex items-center"><input type="radio" name="restaurantType" value="cafe" class="h-4 w-4 text-primary focus:ring-primary border-gray-300"> <span class="ml-2">Cafe</span></label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="fssaiLicense" class="block text-sm font-medium text-gray-700">FSSAI License Number</label>
+                                        <input id="fssaiLicense" name="fssaiLicense" type="text" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="FSSAI License No.">
+                                    </div>
+                                     <div>
+                                        <label for="fssaiUpload" class="block text-sm font-medium text-gray-700">Upload FSSAI License</label>
+                                        <input id="fssaiUpload" name="fssaiUpload" type="file" required class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Hotel Specific Fields -->
+                            <div id="hotel-fields" class="hidden">
+                                <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Hotel Details</h3>
+                                <div class="space-y-6">
+                                    <div>
+                                        <label for="starRating" class="block text-sm font-medium text-gray-700">Hotel Star Rating</label>
+                                        <select id="starRating" name="starRating" class="mt-1 block w-full py-3 px-4 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
+                                            <option>Select rating</option>
+                                            <option value="1">1 Star</option>
+                                            <option value="2">2 Star</option>
+                                            <option value="3">3 Star</option>
+                                            <option value="4">4 Star</option>
+                                            <option value="5">5 Star</option>
+                                        </select>
+                                    </div>
+                                     <div>
+                                        <label for="hotelRegistration" class="block text-sm font-medium text-gray-700">Hotel Registration Number</label>
+                                        <input id="hotelRegistration" name="hotelRegistration" type="text" required class="mt-1 appearance-none rounded-md relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm" placeholder="Registration No.">
+                                    </div>
+                                     <div>
+                                        <label for="hotelRegistrationUpload" class="block text-sm font-medium text-gray-700">Upload Registration Document</label>
+                                        <input id="hotelRegistrationUpload" name="hotelRegistrationUpload" type="file" required class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300">
+                                Submit for Verification
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <p class="mt-8 text-center text-sm text-gray-600">
+                        Already a partner?
+                        <a href="#" class="font-medium text-primary hover:text-teal-700">
+                            Sign in here
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Yatra Mitra. A Smart India Hackathon Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const partnerTypeSelect = document.getElementById('partnerType');
+            const guideFields = document.getElementById('guide-fields');
+            const restaurantFields = document.getElementById('restaurant-fields');
+            const hotelFields = document.getElementById('hotel-fields');
+
+            partnerTypeSelect.addEventListener('change', function() {
+                // Hide all conditional fields first
+                guideFields.classList.add('hidden');
+                restaurantFields.classList.add('hidden');
+                hotelFields.classList.add('hidden');
+
+                // Show fields based on selection
+                if (this.value === 'guide') {
+                    guideFields.classList.remove('hidden');
+                } else if (this.value === 'restaurant') {
+                    restaurantFields.classList.remove('hidden');
+                } else if (this.value === 'hotel') {
+                    hotelFields.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatra Mitra - Your Smart, Safe, and Authentic Travel Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1920x1080/E2E8F0/334155?text=Incredible+India');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#14B8A6', // Teal
+                        'primary-dark': '#0F766E',
+                        secondary: '#334155', // Dark Slate
+                        light: '#F8FAFC',
+                        dark: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-light text-secondary">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="YatraMitra.html" class="text-3xl font-bold text-secondary">
+                Yatra<span class="text-primary">Mitra</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="tourist_login.html" class="px-5 py-2 text-sm font-medium text-white bg-primary rounded-full hover:bg-primary-dark transition duration-300 shadow-sm">Tourist Login / Register</a>
+                <a href="partner_login.html" class="px-5 py-2 text-sm font-medium text-primary border border-primary rounded-full hover:bg-primary hover:text-white transition duration-300">Partner Login</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden" id="mobile-menu-button" aria-label="Open mobile menu">
+                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <a href="tourist_login.html" class="block py-2 px-4 text-sm hover:bg-gray-200">Tourist Login / Register</a>
+            <a href="partner_login.html" class="block py-2 px-4 text-sm hover:bg-gray-200">Partner Login</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white h-[60vh] md:h-[80vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Travel India with Confidence.</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Your smart, safe, and authentic travel companion, powered by a unified ecosystem for a worry-free journey.</p>
+                <a href="tourist_registration.html" class="px-8 py-3 font-semibold text-white bg-primary rounded-full hover:bg-primary-dark transition duration-300 shadow-lg">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2">An All-in-One Smart Ecosystem</h2>
+                <p class="text-gray-600 mb-12">A single app for all your travel needs, ensuring safety, convenience, and cultural immersion.</p>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-light">
+                        <div class="bg-primary text-white rounded-full p-4 inline-flex mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Prioritize Your Safety</h3>
+                        <p>Travel with peace of mind using our instant SOS button, real-time location sharing, and geo-fenced alerts for high-risk zones.</p>
+                    </div>
+                    <div class="p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-light">
+                        <div class="bg-primary text-white rounded-full p-4 inline-flex mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Discover Authentic India</h3>
+                        <p>Connect with verified guides, explore authentic local cuisine with menu previews, and uncover hidden cultural spots.</p>
+                    </div>
+                    <div class="p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-light">
+                       <div class="bg-primary text-white rounded-full p-4 inline-flex mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 16.382V5.618a1 1 0 00-1.447-.894L15 7m-6 10h6" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Plan Your Trip with Ease</h3>
+                        <p>Our smart trip planner helps you organize travel, provides real-time route information, and assists with budget planning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Visiting Recommendations Section -->
+        <section class="py-16 md:py-24 bg-light">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2">Explore Incredible India</h2>
+                <p class="text-gray-600 mb-12">Discover breathtaking destinations with Yatra Mitra.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/14B8A6/FFFFFF?text=Taj+Mahal" alt="Taj Mahal" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Taj Mahal, Agra</h3>
+                            <p class="text-gray-600 mb-4 text-sm">An immense mausoleum of white marble, built between 1631 and 1648 by order of the Mughal emperor Shah Jahan.</p>
+                            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-secondary rounded-full hover:bg-dark transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                                View in 360&deg;
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/334155/FFFFFF?text=Jaipur" alt="Jaipur" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Hawa Mahal, Jaipur</h3>
+                            <p class="text-gray-600 mb-4 text-sm">A palace of winds, it is constructed of red and pink sandstone and sits on the edge of the City Palace, Jaipur.</p>
+                            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-secondary rounded-full hover:bg-dark transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                                View in 360&deg;
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/14B8A6/FFFFFF?text=Kerala" alt="Kerala Backwaters" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Kerala Backwaters</h3>
+                            <p class="text-gray-600 mb-4 text-sm">A network of brackish lagoons and lakes lying parallel to the Arabian Sea coast of Kerala state in southern India.</p>
+                            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-secondary rounded-full hover:bg-dark transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                                View in 360&deg;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Get the App Section -->
+        <section class="py-16 md:py-24 bg-secondary text-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                        <h2 class="text-3xl font-bold mb-4">Get the Yatra Mitra App Now!</h2>
+                        <p class="mb-6">Take safety and convenience with you. Plan trips, find verified partners, and use SOS features right from your phone.</p>
+                        <div class="flex justify-center md:justify-start space-x-4">
+                            <a href="#" class="bg-dark hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center transition duration-300">
+                                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M3.05 3.05a7.5 7.5 0 000 10.607L13.657 24.26a7.5 7.5 0 0010.607-10.607L3.05 3.05zM22.84 4.22a9.5 9.5 0 00-13.434 0L4.22 17.657a9.5 9.5 0 0013.434 13.434L22.84 4.22zM12 10.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+                                <div>
+                                    <span class="text-xs">GET IT ON</span>
+                                    <span class="text-lg font-bold block">Google Play</span>
+                                </div>
+                            </a>
+                            <a href="#" class="bg-dark hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center transition duration-300">
+                               <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M19.333 8.667c0-1.473-1.018-2.883-2.6-2.883-1.29 0-2.07.72-2.6.72-.53 0-1.24-.72-2.4-.72-1.614 0-2.733 1.44-2.733 3.067 0 2.22 1.867 4.547 3.867 4.547.78 0 1.25-.36 2.013-.36.73 0 1.15.36 1.987.36 2.013 0 3.866-2.327 3.866-4.72zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                                <div>
+                                    <span class="text-xs">Download on the</span>
+                                    <span class="text-lg font-bold block">App Store</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3">
+                        <img src="https://placehold.co/400x600/F8FAFC/334155?text=App+Screenshot" alt="Yatra Mitra App Screenshot" class="rounded-lg shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Yatra<span class="text-primary">Mitra</span></h3>
+                    <p class="text-sm">Building a safer, smarter, and more authentic way for everyone to travel across India.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="YatraMitra.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="font-semibold text-white mb-4">Follow Us</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="hover:text-primary transition-colors"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+                        <a href="#" class="hover:text-primary transition-colors"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg></a>
+                        <a href="#" class="hover:text-primary transition-colors"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.795 2.013 10.148 2 12.315 2zm-1.161 1.043c-1.022.046-1.634.21-2.148.41a3.896 3.896 0 00-1.385.913 3.896 3.896 0 00-.913 1.385c-.2.514-.364 1.126-.41 2.148-.046 1.022-.058 1.353-.058 3.633s.012 2.611.058 3.633c.046 1.022.21 1.634.41 2.148a3.896 3.896 0 00.913 1.385 3.896 3.896 0 001.385.913c.514.2.126.364 2.148.41 1.022.046 1.353.058 3.633.058s2.611-.012 3.633-.058c1.022-.046 1.634-.21 2.148-.41a3.896 3.896 0 001.385-.913 3.896 3.896 0 00.913-1.385c.2-.514.364-1.126.41-2.148.046-1.022.058-1.353-.058-3.633s-.012-2.611-.058-3.633c-.046-1.022-.21-1.634-.41-2.148a3.896 3.896 0 00-.913-1.385 3.896 3.896 0 00-1.385-.913c-.514-.2-1.126-.364-2.148-.41-1.022-.046-1.353-.058-3.633-.058zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 1.802a3.333 3.333 0 110 6.666 3.333 3.333 0 010-6.666zm5.338-3.205a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" clip-rule="evenodd" /></svg></a>
+                     </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-sm">
+                <p>&copy; 2025 Yatra Mitra. A Smart India Hackathon Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
