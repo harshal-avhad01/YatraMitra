@@ -43,7 +43,7 @@
                     <h2 class="text-3xl font-bold text-center text-secondary">Become a Yatra Mitra Partner</h2>
                     <p class="text-center text-gray-500 mt-2">Join our network to connect with tourists from across the nation.</p>
                     
-                    <form class="mt-8 space-y-8" id="partner-registration-form" action="partner_dashboard.html">
+                    <form class="mt-8 space-y-8" id="partner-registration-form">
                         
                         <!-- Common Information -->
                         <div>
@@ -195,8 +195,45 @@
                 el.classList.add('mt-1', 'block', 'w-full', 'text-sm', 'text-gray-500', 'file:mr-4', 'file:py-2', 'file:px-4', 'file:rounded-full', 'file:border-0', 'file:text-sm', 'file:font-semibold', 'file:bg-primary/10', 'file:text-primary', 'hover:file:bg-primary/20');
             });
         });
+
+        // --- NEW: Handle form submission for redirection ---
+        document.getElementById('partner-registration-form').addEventListener('submit', function(event) {
+            // Prevent the form from submitting the default way
+            event.preventDefault(); 
+            
+            const partnerType = document.getElementById('partnerType').value;
+
+            if (partnerType === 'none') {
+                alert('Please select a partner type.');
+                return;
+            }
+
+            // Define the destination URL based on the selected partner type
+            let destinationUrl = '';
+            switch (partnerType) {
+                case 'guide':
+                    destinationUrl = 'guide_dash.html';
+                    break;
+                case 'hotel':
+                    destinationUrl = 'hotel_dash.html';
+                    break;
+                case 'restaurant':
+                    destinationUrl = 'resto_dash.html';
+                    break;
+                case 'travel-agency':
+                    destinationUrl = 'tagency_dash.html';
+                    break;
+                default:
+                    // Fallback to a generic dashboard if something goes wrong
+                    destinationUrl = 'partner_login.html'; 
+                    break;
+            }
+            
+            // Redirect the user to the correct dashboard
+            window.location.href = destinationUrl;
+        });
+
     </script>
 </body>
 </html>
-
 
