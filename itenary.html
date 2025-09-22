@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Trip Itinerary - Yatra Mitra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#14B8A6',
+                        'primary-dark': '#0F766E',
+                        secondary: '#334155',
+                        light: '#F8FAFC',
+                        dark: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-light text-secondary">
+
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="YatraMitra.html" class="text-3xl font-bold text-secondary">
+                Yatra<span class="text-primary">Mitra</span>
+            </a>
+            <a href="tourist_dash.html" class="px-5 py-2 text-sm font-medium text-primary border border-primary rounded-full hover:bg-primary hover:text-white transition duration-300">Back to Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="bg-gray-100 py-12 md:py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-secondary">Plan Your Safe & Secure Trip</h1>
+                    <p class="text-gray-500 mt-2">Provide your travel details so we can ensure your safety and connect you with verified partners.</p>
+                </div>
+
+                <form action="tourist_dashboard.html" class="space-y-10">
+                    <!-- Section 1: Basic Trip Details -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-semibold mb-6 border-b pb-4">1. Trip Overview</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="tripName" class="block text-sm font-medium text-gray-700">Trip Name</label>
+                                <input type="text" id="tripName" required class="mt-1 form-input" placeholder="e.g., My Rajasthan Adventure">
+                            </div>
+                            <div>
+                                <label for="startPoint" class="block text-sm font-medium text-gray-700">Trip Start Point</label>
+                                <input type="text" id="startPoint" required class="mt-1 form-input" placeholder="e.g., Pune Airport / Home Address">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="destination" class="block text-sm font-medium text-gray-700">Main Destination (City, State)</label>
+                                <input type="text" id="destination" required class="mt-1 form-input" placeholder="e.g., Jaipur, Rajasthan">
+                            </div>
+                            <div>
+                                <label for="startDate" class="block text-sm font-medium text-gray-700">Start Date</label>
+                                <input type="date" id="startDate" required class="mt-1 form-input">
+                            </div>
+                            <div>
+                                <label for="endDate" class="block text-sm font-medium text-gray-700">End Date</label>
+                                <input type="date" id="endDate" required class="mt-1 form-input">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section 2: Travel Companion Details -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-semibold mb-6 border-b pb-4">2. Travel Companions</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                             <div>
+                                <label for="adults" class="block text-sm font-medium text-gray-700">Number of Adults</label>
+                                <input type="number" id="adults" min="1" required class="mt-1 form-input" placeholder="e.g., 2">
+                            </div>
+                            <div>
+                                <label for="children" class="block text-sm font-medium text-gray-700">Number of Children</label>
+                                <input type="number" id="children" min="0" required class="mt-1 form-input" placeholder="e.g., 1">
+                            </div>
+                        </div>
+                        <div id="companion-list" class="mt-6 space-y-4">
+                            <!-- JS will add companion fields here -->
+                        </div>
+                         <button type="button" id="add-companion" class="mt-4 text-sm font-semibold text-primary hover:text-primary-dark">+ Add Companion Details</button>
+                    </div>
+
+                    <!-- Section 3: Accommodation -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-semibold mb-6 border-b pb-4">3. Accommodation</h2>
+                        <div class="space-y-4">
+                            <p class="text-sm font-medium text-gray-700">Have you booked your stay?</p>
+                            <div class="flex items-center space-x-6">
+                                <label class="flex items-center">
+                                    <input type="radio" name="accommodation" value="yes" class="form-radio">
+                                    <span class="ml-2">Yes, I have booked</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="accommodation" value="no" class="form-radio" checked>
+                                    <span class="ml-2">No, I need assistance from Yatra Mitra</span>
+                                </label>
+                            </div>
+                            <div id="hotel-details" class="hidden pt-4 space-y-4">
+                                <label for="hotelName" class="block text-sm font-medium text-gray-700">Hotel Name & Address</label>
+                                <textarea id="hotelName" rows="2" class="mt-1 form-input" placeholder="Enter the full name and address of your hotel"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: External Bookings -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-semibold mb-6 border-b pb-4">4. External Bookings</h2>
+                        <div class="space-y-6">
+                            <!-- Guide Booking -->
+                            <div>
+                                <p class="text-sm font-medium text-gray-700">Have you hired a local guide on your own?</p>
+                                <div class="flex items-center space-x-6 mt-2">
+                                    <label class="flex items-center"><input type="radio" name="guide" value="yes" class="form-radio"><span class="ml-2">Yes</span></label>
+                                    <label class="flex items-center"><input type="radio" name="guide" value="no" class="form-radio" checked><span class="ml-2">No</span></label>
+                                </div>
+                                <div id="guide-details" class="hidden mt-4 space-y-4">
+                                    <input type="text" class="form-input" placeholder="Guide's Full Name">
+                                    <input type="tel" class="form-input" placeholder="Guide's Contact Number">
+                                </div>
+                            </div>
+                             <!-- Agency Booking -->
+                            <div>
+                                <p class="text-sm font-medium text-gray-700">Have you booked through a travel agency on your own?</p>
+                                <div class="flex items-center space-x-6 mt-2">
+                                    <label class="flex items-center"><input type="radio" name="agency" value="yes" class="form-radio"><span class="ml-2">Yes</span></label>
+                                    <label class="flex items-center"><input type="radio" name="agency" value="no" class="form-radio" checked><span class="ml-2">No</span></label>
+                                </div>
+                                <div id="agency-details" class="hidden mt-4 space-y-4">
+                                    <input type="text" class="form-input" placeholder="Agency's Name">
+                                    <input type="tel" class="form-input" placeholder="Agency's Contact Number">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 5: Yatra Mitra Services -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-semibold mb-6 border-b pb-4">5. Services Required from Yatra Mitra</h2>
+                        <p class="text-sm text-gray-600 mb-4">Select any services you'll need from our network of verified partners.</p>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-3 border rounded-lg hover:bg-gray-50">
+                                <input type="checkbox" name="services" class="form-checkbox h-5 w-5">
+                                <span class="ml-3 text-sm font-medium">I need a verified local guide for my trip.</span>
+                            </label>
+                            <label class="flex items-center p-3 border rounded-lg hover:bg-gray-50">
+                                <input type="checkbox" name="services" class="form-checkbox h-5 w-5">
+                                <span class="ml-3 text-sm font-medium">I want a Yatra Mitra travel agency to help plan my itinerary.</span>
+                            </label>
+                            <label class="flex items-center p-3 border rounded-lg hover:bg-gray-50">
+                                <input type="checkbox" name="services" class="form-checkbox h-5 w-5">
+                                <span class="ml-3 text-sm font-medium">I need to book a local taxi / cab service.</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Section 6: Safety Information -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                         <h2 class="text-2xl font-semibold mb-6 border-b pb-4">6. Safety & Emergency Details</h2>
+                         <div class="space-y-6">
+                            <div>
+                                <label for="medical" class="block text-sm font-medium text-gray-700">Medical Conditions or Allergies</label>
+                                <textarea id="medical" rows="3" class="mt-1 form-input" placeholder="Please mention any important medical information for the travelers (optional). This data is kept confidential and used only in emergencies."></textarea>
+                            </div>
+                             <div>
+                                <label for="notes" class="block text-sm font-medium text-gray-700">Additional Notes or Safety Concerns</label>
+                                <textarea id="notes" rows="3" class="mt-1 form-input" placeholder="Anything else you'd like us to know? (e.g., solo traveler, specific safety concerns, etc.)"></textarea>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button type="submit" class="w-full flex justify-center py-4 px-4 border border-transparent text-lg font-semibold rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300">
+                            Submit & Secure My Trip
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // --- Helper function to style new inputs ---
+        function styleFormElements(container) {
+            container.querySelectorAll('.form-input').forEach(el => {
+                el.classList.add('appearance-none', 'rounded-md', 'relative', 'block', 'w-full', 'px-4', 'py-3', 'border', 'border-gray-300', 'placeholder-gray-500', 'text-gray-900', 'focus:outline-none', 'focus:ring-primary', 'focus:border-primary', 'sm:text-sm');
+            });
+             container.querySelectorAll('.form-radio').forEach(el => {
+                el.classList.add('h-4', 'w-4', 'text-primary', 'focus:ring-primary', 'border-gray-300');
+            });
+            container.querySelectorAll('.form-checkbox').forEach(el => {
+                el.classList.add('h-4', 'w-4', 'text-primary', 'focus:ring-primary', 'border-gray-300', 'rounded');
+            });
+        }
+        
+        // Initial styling
+        styleFormElements(document.body);
+
+        // --- Conditional Logic for Radio Buttons ---
+        function setupRadioToggle(radioName, detailsDivId) {
+            const radios = document.querySelectorAll(`input[name="${radioName}"]`);
+            const detailsDiv = document.getElementById(detailsDivId);
+            radios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'yes') {
+                        detailsDiv.classList.remove('hidden');
+                    } else {
+                        detailsDiv.classList.add('hidden');
+                    }
+                });
+            });
+        }
+        
+        setupRadioToggle('accommodation', 'hotel-details');
+        setupRadioToggle('guide', 'guide-details');
+        setupRadioToggle('agency', 'agency-details');
+
+        // --- Dynamic Companion Fields ---
+        const addCompanionBtn = document.getElementById('add-companion');
+        const companionList = document.getElementById('companion-list');
+        let companionCount = 0;
+
+        addCompanionBtn.addEventListener('click', function() {
+            companionCount++;
+            const newCompanion = document.createElement('div');
+            newCompanion.classList.add('grid', 'grid-cols-1', 'sm:grid-cols-3', 'gap-4', 'items-center');
+            newCompanion.innerHTML = `
+                <div class="sm:col-span-2 grid grid-cols-2 gap-4">
+                    <input type="text" class="form-input" placeholder="Companion ${companionCount} Name" required>
+                    <input type="tel" class="form-input" placeholder="Companion ${companionCount} Phone" required>
+                </div>
+                <button type="button" class="remove-companion text-sm text-red-500 hover:text-red-700 justify-self-start sm:justify-self-end">Remove</button>
+            `;
+            styleFormElements(newCompanion);
+            companionList.appendChild(newCompanion);
+        });
+
+        companionList.addEventListener('click', function(e) {
+            if (e.target && e.target.classList.contains('remove-companion')) {
+                e.target.closest('.grid').remove();
+            }
+        });
+
+    </script>
+</body>
+</html>
+
