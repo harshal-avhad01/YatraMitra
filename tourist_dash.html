@@ -27,6 +27,25 @@
         }
     </script>
 </head>
+<div id="translate-widget" 
+       style="position:fixed; top:20px; right:20px; background:white; border:1px solid #ccc; padding:8px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.25); z-index:9999;">
+    <div id="google_translate_element"></div>
+  </div>
+
+  <!-- Google Translate -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,hi,bn,gu,kn,ml,mr,pa,ta,te,ur,or,as,ks,sd,ne,si,sa'
+        },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
 <script>
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="K1zCAjhy1nznlGpIdWUiM";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
@@ -120,4 +139,5 @@
     </nav>
 </body>
 </html>
+
 
