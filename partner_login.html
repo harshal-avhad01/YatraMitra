@@ -26,8 +26,22 @@
         }
     </script>
 </head>
+<body class="font-poppins bg-light text-secondary">
 
-    <div id="translate-widget" 
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <a href="YatraMitra.html".html" class="text-3xl font-bold text-secondary">
+                Yatra<span class="text-primary">Mitra</span>
+            </a>
+        </nav>
+    </header>
+
+    <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="K1zCAjhy1nznlGpIdWUiM";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+    <main class="bg-gray-100 py-12 md:py-20">
+
+         <div id="translate-widget" 
        style="position:fixed; top:20px; right:20px; background:white; border:1px solid #ccc; padding:8px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.25); z-index:9999;">
     <div id="google_translate_element"></div>
   </div>
@@ -42,20 +56,10 @@
         },
         'google_translate_element'
       );
-    }
+       }
   </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<body class="font-poppins bg-light text-secondary">
 
-    <header class="bg-white shadow-sm">
-        <nav class="container mx-auto px-6 py-4">
-            <a href="YatraMitra.html" class="text-3xl font-bold text-secondary">
-                Yatra<span class="text-primary">Mitra</span>
-            </a>
-        </nav>
-    </header>
-
-    <main class="bg-gray-100 py-12 md:py-20">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
                 <div class="p-8 md:p-12">
@@ -64,7 +68,6 @@
                     
                     <form class="mt-8 space-y-8" id="partner-registration-form">
                         
-                        <!-- Common Information -->
                         <div>
                             <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Basic Information</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -87,7 +90,6 @@
                             </div>
                         </div>
 
-                        <!-- Partner Type Selection -->
                         <div>
                             <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Partner Type</h3>
                             <div>
@@ -102,11 +104,9 @@
                             </div>
                         </div>
 
-                        <!-- Conditional Fields will be managed by JavaScript -->
                         <div id="conditional-fields" class="space-y-8"></div>
                         
-                         <!-- Identity Verification -->
-                        <div>
+                         <div>
                             <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Identity Verification</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
@@ -143,14 +143,41 @@
                         <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Guide Details</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="languages" class="block text-sm font-medium text-gray-700">Languages Known</label>
-                                <input type="text" id="languages" required class="mt-1 form-input" placeholder="e.g., English, Hindi, Marathi">
-                            </div>
-                             <div>
                                 <label for="experience" class="block text-sm font-medium text-gray-700">Years of Experience</label>
                                 <input type="number" id="experience" required class="mt-1 form-input" placeholder="e.g., 5">
                             </div>
-                             <div class="md:col-span-2">
+                             <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Languages Known</label>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="English" class="form-checkbox"> <span class="ml-2">English</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="Hindi" class="form-checkbox"> <span class="ml-2">Hindi</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="Marathi" class="form-checkbox"> <span class="ml-2">Marathi</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="Gujarati" class="form-checkbox"> <span class="ml-2">Gujarati</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="Bengali" class="form-checkbox"> <span class="ml-2">Bengali</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="Tamil" class="form-checkbox"> <span class="ml-2">Tamil</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="Kannada" class="form-checkbox"> <span class="ml-2">Kannada</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="Telugu" class="form-checkbox"> <span class="ml-2">Telugu</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="Malayalam" class="form-checkbox"> <span class="ml-2">Malayalam</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="Punjabi" class="form-checkbox"> <span class="ml-2">Punjabi</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="guide-language" value="Other" class="form-checkbox"> <span class="ml-2">Other (specify below)</span></label>
+                                </div>
+                                <input type="text" id="otherLanguage" class="mt-2 form-input hidden" placeholder="Specify other languages">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="specialization" class="block text-sm font-medium text-gray-700">Specialization</label>
+                                <select id="specialization" class="mt-1 form-select">
+                                    <option value="">-- Select Specialization --</option>
+                                    <option value="history">History & Culture</option>
+                                    <option value="adventure">Adventure & Outdoors</option>
+                                    <option value="food">Food & Culinary</option>
+                                    <option value="wildlife">Wildlife & Nature</option>
+                                    <option value="spiritual">Spiritual & Pilgrimage</option>
+                                    <option value="city_tours">City Tours</option>
+                                    <option value="trekking">Trekking</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="md:col-span-2">
                                 <label for="license" class="block text-sm font-medium text-gray-700">Official Guide License Upload</label>
                                 <input id="license" type="file" required class="mt-1 form-file">
                             </div>
@@ -165,13 +192,34 @@
                             <div>
                                 <label for="restaurantType" class="block text-sm font-medium text-gray-700">Restaurant Type</label>
                                 <select id="restaurantType" class="mt-1 form-select">
-                                    <option>Vegetarian</option>
-                                    <option>Non-Vegetarian</option>
-                                    <option>Veg & Non-Veg</option>
-                                    <option>Restobar</option>
+                                    <option value="">-- Select Type --</option>
+                                    <option value="veg">Vegetarian</option>
+                                    <option value="nonveg">Non-Vegetarian</option>
+                                    <option value="both">Veg & Non-Veg</option>
+                                    <option value="cafe">Cafe</option>
+                                    <option value="fine_dining">Fine Dining</option>
+                                    <option value="casual">Casual Dining</option>
+                                    <option value="restobar">Restobar</option>
                                 </select>
                             </div>
                             <div>
+                                <label for="cuisine" class="block text-sm font-medium text-gray-700">Primary Cuisine</label>
+                                <select id="cuisine" class="mt-1 form-select">
+                                    <option value="">-- Select Cuisine --</option>
+                                    <option value="indian">Indian</option>
+                                    <option value="chinese">Chinese</option>
+                                    <option value="italian">Italian</option>
+                                    <option value="continental">Continental</option>
+                                    <option value="mexican">Mexican</option>
+                                    <option value="thai">Thai</option>
+                                    <option value="multi">Multi-cuisine</option>
+                                </select>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="seatingCapacity" class="block text-sm font-medium text-gray-700">Seating Capacity</label>
+                                <input type="number" id="seatingCapacity" required class="mt-1 form-input" placeholder="e.g., 50">
+                            </div>
+                            <div class="md:col-span-2">
                                 <label for="fssai" class="block text-sm font-medium text-gray-700">FSSAI License Upload</label>
                                 <input id="fssai" type="file" required class="mt-1 form-file">
                             </div>
@@ -182,9 +230,41 @@
                 fieldsHTML = `
                     <div>
                         <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Hotel Details</h3>
-                        <div>
-                            <label for="hotelReg" class="block text-sm font-medium text-gray-700">Hotel Registration Document</label>
-                            <input id="hotelReg" type="file" required class="mt-1 form-file">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="starRating" class="block text-sm font-medium text-gray-700">Star Rating</label>
+                                <select id="starRating" class="mt-1 form-select">
+                                    <option value="">-- Select Rating --</option>
+                                    <option value="1">1 Star</option>
+                                    <option value="2">2 Star</option>
+                                    <option value="3">3 Star</option>
+                                    <option value="4">4 Star</option>
+                                    <option value="5">5 Star</option>
+                                    <option value="boutique">Boutique</option>
+                                    <option value="homestay">Homestay</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="numRooms" class="block text-sm font-medium text-gray-700">Number of Rooms</label>
+                                <input type="number" id="numRooms" required class="mt-1 form-input" placeholder="e.g., 30">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Key Facilities</label>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                    <label class="inline-flex items-center"><input type="checkbox" name="hotel-facility" value="WiFi" class="form-checkbox"> <span class="ml-2">Free WiFi</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="hotel-facility" value="AC" class="form-checkbox"> <span class="ml-2">AC Rooms</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="hotel-facility" value="Parking" class="form-checkbox"> <span class="ml-2">Parking</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="hotel-facility" value="Restaurant" class="form-checkbox"> <span class="ml-2">Restaurant</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="hotel-facility" value="Pool" class="form-checkbox"> <span class="ml-2">Swimming Pool</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="hotel-facility" value="Spa" class="form-checkbox"> <span class="ml-2">Spa/Wellness</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="hotel-facility" value="Gym" class="form-checkbox"> <span class="ml-2">Gym</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="hotel-facility" value="Laundry" class="form-checkbox"> <span class="ml-2">Laundry Service</span></label>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="hotelReg" class="block text-sm font-medium text-gray-700">Hotel Registration Document</label>
+                                <input id="hotelReg" type="file" required class="mt-1 form-file">
+                            </div>
                         </div>
                     </div>
                 `;
@@ -196,6 +276,24 @@
                             <div>
                                 <label for="agencyRegNumber" class="block text-sm font-medium text-gray-700">Agency Registration No.</label>
                                 <input type="text" id="agencyRegNumber" required class="mt-1 form-input" placeholder="From Ministry of Tourism, etc.">
+                            </div>
+                            <div>
+                                <label for="yearsOperating" class="block text-sm font-medium text-gray-700">Years Operating</label>
+                                <input type="number" id="yearsOperating" required class="mt-1 form-input" placeholder="e.g., 10">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Specializes In (Regions/Types)</label>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                    <label class="inline-flex items-center"><input type="checkbox" name="agency-specialization" value="Rajasthan" class="form-checkbox"> <span class="ml-2">Rajasthan Tours</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="agency-specialization" value="Kerala" class="form-checkbox"> <span class="ml-2">Kerala Backwaters</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="agency-specialization" value="Himalayan" class="form-checkbox"> <span class="ml-2">Himalayan Treks</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="agency-specialization" value="Goa" class="form-checkbox"> <span class="ml-2">Goa & Beaches</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="agency-specialization" value="NorthEast" class="form-checkbox"> <span class="ml-2">North East India</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="agency-specialization" value="SouthIndia" class="form-checkbox"> <span class="ml-2">South India Culture</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="agency-specialization" value="Adventure" class="form-checkbox"> <span class="ml-2">Adventure Tours</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="agency-specialization" value="Pilgrimage" class="form-checkbox"> <span class="ml-2">Pilgrimage Tours</span></label>
+                                    <label class="inline-flex items-center"><input type="checkbox" name="agency-specialization" value="GroupTours" class="form-checkbox"> <span class="ml-2">Group Tours</span></label>
+                                </div>
                             </div>
                              <div class="md:col-span-2">
                                 <label for="agencyLicense" class="block text-sm font-medium text-gray-700">Official Agency License Upload</label>
@@ -213,9 +311,26 @@
             container.querySelectorAll('input[type="file"]').forEach(el => {
                 el.classList.add('mt-1', 'block', 'w-full', 'text-sm', 'text-gray-500', 'file:mr-4', 'file:py-2', 'file:px-4', 'file:rounded-full', 'file:border-0', 'file:text-sm', 'file:font-semibold', 'file:bg-primary/10', 'file:text-primary', 'hover:file:bg-primary/20');
             });
+            // Style new checkboxes and radios
+            container.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(el => {
+                el.classList.add('h-4', 'w-4', 'text-primary', 'focus:ring-primary', 'border-gray-300', 'rounded');
+            });
+
+            // Special handling for 'Other' language input
+            const otherLanguageCheckbox = container.querySelector('input[value="Other"][name="guide-language"]');
+            if (otherLanguageCheckbox) {
+                otherLanguageCheckbox.addEventListener('change', function() {
+                    const otherLanguageInput = document.getElementById('otherLanguage');
+                    if (this.checked) {
+                        otherLanguageInput.classList.remove('hidden');
+                    } else {
+                        otherLanguageInput.classList.add('hidden');
+                    }
+                });
+            }
         });
 
-        // --- NEW: Handle form submission for redirection ---
+        // --- Handle form submission for redirection ---
         document.getElementById('partner-registration-form').addEventListener('submit', function(event) {
             // Prevent the form from submitting the default way
             event.preventDefault(); 
@@ -244,7 +359,7 @@
                     break;
                 default:
                     // Fallback to a generic dashboard if something goes wrong
-                    destinationUrl = 'partner_login.html'; 
+                    destinationUrl = 'partner_dashboard.html'; 
                     break;
             }
             
@@ -252,8 +367,10 @@
             window.location.href = destinationUrl;
         });
 
+        // Trigger change event once to load initial conditional fields if a default option is set or for review
+        document.getElementById('partnerType').dispatchEvent(new Event('change'));
+
     </script>
 </body>
 </html>
-
 
